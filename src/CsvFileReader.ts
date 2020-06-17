@@ -14,6 +14,6 @@ export abstract class CsvFileReader<T> {
     .readFileSync(this.filename, { encoding: 'utf-8' })
     .split('\n')
     .map((row: string): string[] => row.split(','))
-    .map(this.mapRow)
+    .map(this.mapRow);
   }
 }
