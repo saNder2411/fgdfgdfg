@@ -9,14 +9,14 @@ export interface OutputTarget {
 }
 
 export class Summary {
-  data: string = ``;
+  output: string = ``;
   constructor(
     private analyzer: Analyzer,
     private outputTarget: OutputTarget) {}
 
   bindAndPrintReport(matches: MatchData[]) {
-    this.data = this.analyzer.run(matches);
-    this.outputTarget.print(this.data);
+    this.output = this.analyzer.run(matches);
+    this.outputTarget.print(this.output);
 
   }
 }
